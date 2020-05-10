@@ -136,4 +136,11 @@ void bfs(string **verticies, int verticiesSize, int edgeSize) {
 	} else {
 		cout << "No, if impossible" << endl;
 	}
+
+	//Array Cleanup
+	delete[] babyface;
+	babyface = 0;
+
+	delete[] heels;
+	heels = 0;
 }
