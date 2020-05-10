@@ -22,9 +22,9 @@ int main(int argc, char * args[]) {
 	for (int i = 0; i < verticiesSize + 1; i++) {
 		verticies[i] = new string[verticiesSize+1];
 	}
-	for (int i = 0; i < verticiesSize; i++) {
-		inputFile >> verticies[0][i];
-	}
+	// for (int i = 0; i < verticiesSize; i++) {
+	// 	inputFile >> verticies[0][i];
+	// }
 
 	// // handle edges
 	// inputFile >> edgeSize;
