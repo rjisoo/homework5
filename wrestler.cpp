@@ -62,6 +62,11 @@ int main(int argc, char * args[]) {
 	}
 
 	bfs(verticies, verticiesSize, edgeSize);
+	//	Clean up Array
+	for (int i = 0; i < sizeV+1 ; i++) {
+		delete[] verticies[i];
+	}
+	verticies = 0;
 	return 0;
 }
 
