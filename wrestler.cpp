@@ -19,7 +19,7 @@ int main(int argc, char * args[]) {
 	// handle verticies
 	inputFile >> verticiesSize;
 	verticies = new string*[verticiesSize];
-	for (int i = 0; i < verticiesSize + 1; i++) {
+	for (int i = 0; i < verticiesSize; i++) {
 		verticies[i] = new string[verticiesSize+1];
 	}
 	// for (int i = 0; i < verticiesSize; i++) {
