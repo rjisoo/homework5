@@ -68,75 +68,75 @@ int main(int argc, char * args[]) {
 
 // by using bfs, fill out babyfaces and heels array according to the rivarity status.
 void bfs(string **verticies, int verticiesSize, int edgeSize) {
-	bool viableSplit = true;
+	// bool viableSplit = true;
 
-	// set babyfaces array
-	string * babyface;
-	babyface = new string[verticiesSize];
+	// // set babyfaces array
+	// string * babyface;
+	// babyface = new string[verticiesSize];
 
-	// set heels array
-	string * heels;
-	heels = new string[verticiesSize];
+	// // set heels array
+	// string * heels;
+	// heels = new string[verticiesSize];
 
-	int countBabyfaces = 0;
-	int countHeels = 0;
+	// int countBabyfaces = 0;
+	// int countHeels = 0;
 
-	if (edgeSize != (verticiesSize * 2)) {
-		int i = 0;
+	// if (edgeSize != (verticiesSize * 2)) {
+	// 	int i = 0;
 
-		// check first two matches
-		while (i != 2) {
-			for (int j = 0; j < verticiesSize; j++) {
-				// if verticies is empty, add according member
-				if (verticies[j + 1][i] != "") {
-					if (i == 0) {
-						heels[j] = verticies[j + 1][i];
-						countHeels++;
-					} else {
-						babyface[j] = verticies[j + 1][i];
-						countBabyfaces++;
-					}
-				}
-			}
-			i++;
-		}
+	// 	// check first two matches
+	// 	while (i != 2) {
+	// 		for (int j = 0; j < verticiesSize; j++) {
+	// 			// if verticies is empty, add according member
+	// 			if (verticies[j + 1][i] != "") {
+	// 				if (i == 0) {
+	// 					heels[j] = verticies[j + 1][i];
+	// 					countHeels++;
+	// 				} else {
+	// 					babyface[j] = verticies[j + 1][i];
+	// 					countBabyfaces++;
+	// 				}
+	// 			}
+	// 		}
+	// 		i++;
+	// 	}
 
 
-		int z = 0;
-		while (z != verticiesSize) {
-			if (babyface[z] == heels[z]) {
-				viableSplit = false;
-			}
-			z++;
-		}
-	} else {
-		// otherwise, set viable to false
-		viableSplit = false;
-	}
+	// 	int z = 0;
+	// 	while (z != verticiesSize) {
+	// 		if (babyface[z] == heels[z]) {
+	// 			viableSplit = false;
+	// 		}
+	// 		z++;
+	// 	}
+	// } else {
+	// 	// otherwise, set viable to false
+	// 	viableSplit = false;
+	// }
 
-	// print out
-	if (viableSplit) {
-		cout << "Yes" << endl << "Babyface: ";
+	// // print out
+	// if (viableSplit) {
+	// 	cout << "Yes" << endl << "Babyface: ";
 
-		for (int i = 0; i < verticiesSize; i++) {
-			cout << babyface[i] << " ";
-		}
+	// 	for (int i = 0; i < verticiesSize; i++) {
+	// 		cout << babyface[i] << " ";
+	// 	}
 
-		cout << endl << "Heels:";
+	// 	cout << endl << "Heels:";
 
-		for (int i = verticiesSize - 1; i > -1; i--) {
-			cout << heels[i] << " ";
-		}
+	// 	for (int i = verticiesSize - 1; i > -1; i--) {
+	// 		cout << heels[i] << " ";
+	// 	}
 
-		cout << endl;
-	} else {
-		cout << "No, if impossible" << endl;
-	}
+	// 	cout << endl;
+	// } else {
+	// 	cout << "No, if impossible" << endl;
+	// }
 
-	// //Array Cleanup
-	// delete[] babyface;
-	// babyface = 0;
+	// // //Array Cleanup
+	// // delete[] babyface;
+	// // babyface = 0;
 
-	// delete[] heels;
+	// // delete[] heels;
 	// heels = 0;
 }
