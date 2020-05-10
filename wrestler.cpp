@@ -118,15 +118,15 @@ void bfs(string **verticies, int verticiesSize, int edgeSize) {
 	if (viableSplit) {
 		cout << "Yes" << endl << "Babyface: ";
 
-		for (int i = 0; i < verticiesSize; i++) {
-			cout << babyface[i] << " ";
-		}
+		// for (int i = 0; i < verticiesSize; i++) {
+		// 	cout << babyface[i] << " ";
+		// }
 
-		cout << endl << "Heels:";
+		// cout << endl << "Heels:";
 
-		for (int i = verticiesSize - 1; i > -1; i--) {
-			cout << heels[i] << " ";
-		}
+		// for (int i = verticiesSize - 1; i > -1; i--) {
+		// 	cout << heels[i] << " ";
+		// }
 
 		cout << endl;
 	} else {
