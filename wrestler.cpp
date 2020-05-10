@@ -61,7 +61,7 @@ int main(int argc, char * args[]) {
 		}
 	}
 
-	bfs(verticies, verticiesSize, edgeSize);
+	// bfs(verticies, verticiesSize, edgeSize);
 	inputFile.close();
 	return 0;
 }
@@ -118,25 +118,25 @@ void bfs(string **verticies, int verticiesSize, int edgeSize) {
 	if (viableSplit) {
 		cout << "Yes" << endl << "Babyface: ";
 
-		// for (int i = 0; i < verticiesSize; i++) {
-		// 	cout << babyface[i] << " ";
-		// }
+		for (int i = 0; i < verticiesSize; i++) {
+			cout << babyface[i] << " ";
+		}
 
-		// cout << endl << "Heels:";
+		cout << endl << "Heels:";
 
-		// for (int i = verticiesSize - 1; i > -1; i--) {
-		// 	cout << heels[i] << " ";
-		// }
+		for (int i = verticiesSize - 1; i > -1; i--) {
+			cout << heels[i] << " ";
+		}
 
 		cout << endl;
 	} else {
 		cout << "No, if impossible" << endl;
 	}
 
-	//Array Cleanup
-	delete[] babyface;
-	babyface = 0;
+	// //Array Cleanup
+	// delete[] babyface;
+	// babyface = 0;
 
-	delete[] heels;
-	heels = 0;
+	// delete[] heels;
+	// heels = 0;
 }
