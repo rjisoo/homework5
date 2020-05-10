@@ -18,9 +18,9 @@ int main(int argc, char * args[]) {
 
 	// handle verticies
 	inputFile >> verticiesSize;
-	verticies = new string*[verticiesSize];
-	for (int i = 0; i < verticiesSize; i++) {
-		verticies[i] = new string[verticiesSize+1];
+	verticies = new string*[verticiesSize + 1];
+	for (int i = 0; i < verticiesSize + 1; i++) {
+		verticies[i] = new string[verticiesSize + 1];
 	}
 	for (int i = 0; i < verticiesSize; i++) {
 		inputFile >> verticies[0][i];
