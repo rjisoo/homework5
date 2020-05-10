@@ -62,6 +62,7 @@ int main(int argc, char * args[]) {
 	}
 
 	bfs(verticies, verticiesSize, edgeSize);
+	inputFile.close();
 	return 0;
 }
 
