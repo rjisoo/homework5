@@ -33,33 +33,33 @@ int main(int argc, char * args[]) {
 	int checkBreakout = 0;
 	int countAddedEdge = 0;
 
-	// iterate until check all edges
-	while (checkBreakout != edgeSize) {
-		inputFile >> verticie;
-		inputFile >> edge;
+	// // iterate until check all edges
+	// while (checkBreakout != edgeSize) {
+	// 	inputFile >> verticie;
+	// 	inputFile >> edge;
 
-		for (int i = 0; i < verticiesSize; i++) {
-			// find columns
-			if (verticie == verticies[0][i]) {
-				for (int j = 0; j < verticiesSize; j++) {
-					if (edge == verticies[0][j]) {
-						verticies[j+1][i] = edge;
-						verticies[i+1][j] = verticie;
+	// 	for (int i = 0; i < verticiesSize; i++) {
+	// 		// find columns
+	// 		if (verticie == verticies[0][i]) {
+	// 			for (int j = 0; j < verticiesSize; j++) {
+	// 				if (edge == verticies[0][j]) {
+	// 					verticies[j+1][i] = edge;
+	// 					verticies[i+1][j] = verticie;
 
-						countAddedEdge = 1;
-						checkBreakout++;
-						break;
-					}
-				}
+	// 					countAddedEdge = 1;
+	// 					checkBreakout++;
+	// 					break;
+	// 				}
+	// 			}
 
-				// if edge is already checked, reset the value, and break the loop
-				if (countAddedEdge == 1) {
-					countAddedEdge--;
-					break;
-				}
-			}
-		}
-	}
+	// 			// if edge is already checked, reset the value, and break the loop
+	// 			if (countAddedEdge == 1) {
+	// 				countAddedEdge--;
+	// 				break;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	// bfs(verticies, verticiesSize, edgeSize);
 	inputFile.close();
