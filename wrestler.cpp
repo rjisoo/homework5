@@ -16,15 +16,15 @@ int main(int argc, char * args[]) {
 
 	inputFile.open(args[1]);
 
-	// // handle verticies
-	// inputFile >> verticiesSize;
-	// verticies = new string*[verticiesSize];
-	// for (int i = 0; i < verticiesSize + 1; i++) {
-	// 	verticies[i] = new string[verticiesSize+1];
-	// }
-	// for (int i = 0; i < verticiesSize; i++) {
-	// 	inputFile >> verticies[0][i];
-	// }
+	// handle verticies
+	inputFile >> verticiesSize;
+	verticies = new string*[verticiesSize];
+	for (int i = 0; i < verticiesSize + 1; i++) {
+		verticies[i] = new string[verticiesSize+1];
+	}
+	for (int i = 0; i < verticiesSize; i++) {
+		inputFile >> verticies[0][i];
+	}
 
 	// // handle edges
 	// inputFile >> edgeSize;
